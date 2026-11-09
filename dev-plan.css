@@ -165,9 +165,10 @@
 
 .dev-stage-3-cat{
   display:block;
-  width:clamp(220px,20vw,350px);
-  max-height:38vh;
-  margin:clamp(18px,3vh,34px) auto 0;
+  width:clamp(300px,26vw,460px);
+  max-height:52vh;
+  margin:auto auto -2vh;
+  align-self:end;
   object-fit:contain;
   filter:drop-shadow(0 16px 24px rgba(10,2,7,.35));
   pointer-events:none;
@@ -226,7 +227,7 @@
   .dev-layout{grid-template-columns:1fr}
   .dev-layout .pp-body{max-width:900px}
   .dev-stage-3-side{display:block}
-  .dev-stage-3-cat{width:clamp(200px,34vw,320px);max-height:34vh;margin-top:22px}
+  .dev-stage-3-cat{width:clamp(260px,40vw,380px);max-height:44vh;margin:auto auto -1vh;align-self:end}
   .dev-stage{height:auto;min-height:100svh;overflow:visible;padding-bottom:120px}
   .dev-stage--combined{height:auto;min-height:100svh;overflow:visible}
   .dev-combined-wrap{height:auto}
@@ -239,7 +240,7 @@
   .dev-summary{width:100%}
   .dev-stage{padding-top:96px}
   .dev-logo{width:min(420px,86vw)}
-  .dev-stage-3-cat{width:220px;max-height:30vh;margin-top:18px}
+  .dev-stage-3-cat{width:260px;max-height:34vh;margin:18px auto 0}
   .dev-plan-cat{width:170px;opacity:.5}
 }
 
