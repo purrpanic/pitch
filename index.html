@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#24101a">
   <title>Purrcelain Panic — Project Management Presentation</title>
-  <link rel="stylesheet" href="site.css?v=nav-fix-20261109-2">
+  <link rel="stylesheet" href="site.css?v=contact-screen-20261109-1">
   <link rel="stylesheet" href="dev-ui-tokens.css">
   <link rel="stylesheet" href="dev-ui-components.css">
   <link rel="stylesheet" href="dev-plan.css">
@@ -24,6 +24,7 @@
       <a href="#gantt" class="block-nav__item" data-block="gantt">Gantt</a>
       <a href="#risk-register" class="block-nav__item" data-block="risks">Risks</a>
       <a href="#issue-log" class="block-nav__item" data-block="issues">Issues</a>
+      <a href="#contacts" class="block-nav__item" data-block="contacts">Contacts</a>
     </nav>
   </header>
   <nav class="screen-nav" aria-label="Екрани презентації">
@@ -48,6 +49,7 @@
     <a href="#risk-register-table" aria-label="Risk Register table"><span>Таблиця ризиків</span></a>
     <a href="#issue-log" aria-label="Issue Log"><span>Issue Log</span></a>
     <a href="#issue-log-table" aria-label="Issue Log table"><span>Таблиця issues</span></a>
+    <a href="#contacts" aria-label="Контакти"><span>Контакти</span></a>
   </nav>
   <main>
     <section id="hero" class="screen hero" data-screen>
@@ -396,11 +398,28 @@
         </tbody></table></div>
         <div class="gov-table-footer"><p>Issue Log · Purrcelain Panic Vertical Slice</p><a href="https://docs.google.com/spreadsheets/d/1WquavUikh5NpupMbyY4uh4J-bMsilNdbfyRHNXgfUuw/edit?gid=578865373#gid=578865373&amp;range=A1:I1" target="_blank" rel="noopener">Відкрити Master Doc ↗</a></div>
       </div>
-      <a class="next next--large" href="#hero" aria-label="До початку"><i></i></a>
+      <a class="next next--large" href="#contacts" aria-label="До контактів"><i></i></a>
+    </section>
+
+    <section id="contacts" class="screen hero contact-screen" data-screen>
+      <div class="hero__shade"></div>
+      <div class="wrap hero__content contact-screen__content reveal">
+        <img class="hero__logo contact-screen__logo" src="assets/logo.png" alt="Purrcelain Panic">
+        <div class="contact-screen__cards" aria-label="Контакти">
+          <a class="contact-card" href="mailto:roma.grushevoy@gmail.com">
+            <svg class="contact-card__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm8 7.1L19.2 7H4.8l7.2 5.1Zm0 2.4L4 8.8V17h16V8.8l-8 5.7Z"/></svg>
+            <span><small>Gmail</small><strong>roma.grushevoy@gmail.com</strong></span>
+          </a>
+          <a class="contact-card" href="https://t.me/romahha" target="_blank" rel="noopener">
+            <svg class="contact-card__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m21.6 3.3-3.2 15.1c-.2 1.1-.9 1.4-1.8.9l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.4-5 9.1-8.2c.4-.4-.1-.6-.6-.2L5.9 12.2 1 10.7c-1.1-.3-1.1-1.1.2-1.6L20.3 1.8c.9-.3 1.7.2 1.3 1.5Z"/></svg>
+            <span><small>Telegram</small><strong>@romahha</strong></span>
+          </a>
+        </div>
+      </div>
     </section>
   </main>
   <footer class="footer"><span>Purrcelain Panic · Project Management Presentation · <a href="https://docs.google.com/spreadsheets/d/1WquavUikh5NpupMbyY4uh4J-bMsilNdbfyRHNXgfUuw/edit?gid=0">Dev Plan source ↗</a></span><a href="https://www.styleshout.com/">Дизайн-система адаптована з Monica / StyleShout ↗</a></footer>
-  <script src="site.js?v=nav-fix-20261109-2"></script>
+  <script src="site.js?v=contact-screen-20261109-1"></script>
   <script src="gantt.js?v=gantt-data-20261107-1"></script>
 </body>
 </html>

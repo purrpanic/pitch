@@ -24,7 +24,7 @@ const updateScreen = () => {
     if (active) link.setAttribute('aria-current', 'location');
     else link.removeAttribute('aria-current');
   });
-  const currentBlock = current.id.startsWith('issue') ? 'issues' : current.id.startsWith('risk') ? 'risks' : current.id.startsWith('gantt') ? 'gantt' : current.id.startsWith('scope') ? 'scope' : current.id.startsWith('raci') ? 'raci' : current.id.startsWith('dev-') ? 'dev' : 'pitch';
+  const currentBlock = current.id === 'contacts' ? 'contacts' : current.id.startsWith('issue') ? 'issues' : current.id.startsWith('risk') ? 'risks' : current.id.startsWith('gantt') ? 'gantt' : current.id.startsWith('scope') ? 'scope' : current.id.startsWith('raci') ? 'raci' : current.id.startsWith('dev-') ? 'dev' : 'pitch';
   blockLinks.forEach(link => {
     const active = link.dataset.block === currentBlock;
     link.classList.toggle('active', active);
