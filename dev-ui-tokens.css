@@ -1,0 +1,57 @@
+/* Purrcelain Panic UI Kit V2. Approved pitch values; no remote dependencies. */
+:root {
+  --pp-bg: #210d18;
+  --pp-wine: #2d101c;
+  --pp-overlay-rgb: 36, 13, 26;
+  --pp-cream: #fff0d9;
+  --pp-muted: #d8bfb2;
+  --pp-gold: #f4d39b;
+  --pp-gold-dark: #d4a762;
+  --pp-line: rgba(235,187,124,.28);
+  --pp-heading-gradient: linear-gradient(180deg,#fff4d7 10%,#ffe5ad 52%,#f0aa52 100%);
+  --pp-shade-left: linear-gradient(90deg,#240d1af5 0%,#240d1ae8 30%,#240d1aa5 52%,#240d1a22 100%);
+  --pp-shade-right: linear-gradient(270deg,rgba(36,13,26,.94) 0%,rgba(36,13,26,.88) 32%,rgba(36,13,26,.70) 50%,rgba(36,13,26,.36) 70%,transparent 96%);
+  --pp-shade-top: linear-gradient(180deg,var(--pp-bg),rgba(33,13,24,.78) 28%,transparent);
+  --pp-surface: linear-gradient(145deg,rgba(105,52,60,.78),rgba(54,24,34,.84));
+  --pp-surface-light: linear-gradient(145deg,rgba(105,52,60,.40),rgba(54,24,34,.48));
+  --pp-surface-strong: linear-gradient(145deg,rgba(105,52,60,.84),rgba(54,24,34,.88));
+  --pp-table-surface: #2d101c;
+  --pp-shadow: 0 16px 48px #09030935;
+  --pp-radius: 18px;
+  --pp-radius-small: 12px;
+  --pp-radius-compact: 16px;
+  --pp-blur: 8px;
+  --pp-blur-light: 4px;
+  --pp-font: Arial, sans-serif;
+  --pp-title: clamp(40px,4.4vw,72px);
+  --pp-title-compact: clamp(30px,3.2vw,52px);
+  --pp-lead: clamp(17px,1.5vw,24px);
+  --pp-subheading: clamp(19px,1.5vw,24px);
+  --pp-body: clamp(15px,1.2vw,19px);
+  --pp-facts: clamp(15px,1.25vw,20px);
+  --pp-metric: clamp(60px,7vw,108px);
+  --pp-table-text: 16px;
+  --pp-small: 13px;
+  --pp-space-1: 4px;
+  --pp-space-2: 8px;
+  --pp-space-3: 12px;
+  --pp-space-4: 16px;
+  --pp-space-5: 24px;
+  --pp-space-6: 32px;
+  --pp-space-7: 48px;
+  --pp-space-8: 64px;
+  --pp-wrap-max: 1420px;
+  --pp-next-size: 48px;
+  --pp-next-bottom: clamp(40px,4.5vh,56px);
+  --pp-z-effects: 0;
+  --pp-z-content: 1;
+  --pp-z-decoration: 2;
+  --pp-z-next: 20;
+  --pp-z-progress: 90;
+  --pp-z-header: 100;
+  /* Semantic extensions for future data pages, not existing pitch statuses. */
+  --pp-success: #b9d7b0;
+  --pp-warning: #f4d39b;
+  --pp-danger: #f1b2b9;
+  --pp-info: #b9cde7;
+}

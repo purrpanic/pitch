@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#24101a">
+  <title>Purrcelain Panic — Project Management Presentation</title>
+  <link rel="stylesheet" href="site.css?v=slice-transparent-card-20261105">
+  <link rel="stylesheet" href="dev-ui-tokens.css">
+  <link rel="stylesheet" href="dev-ui-components.css">
+  <link rel="stylesheet" href="dev-plan.css">
+  <link rel="stylesheet" href="raci.css?v=raci-layout-20261106-2">
+  <link rel="stylesheet" href="scope.css?v=scope-layout-20261106-1">
+  <link rel="stylesheet" href="gantt.css?v=gantt-layout-20261107-2">
+  <link rel="stylesheet" href="risk-issue.css?v=governance-layout-20261107-2">
+</head>
+<body>
+  <header class="header">
+    <nav class="block-nav" aria-label="Блоки проєкту">
+      <a href="#hero" class="block-nav__item active" data-block="pitch" aria-current="page">Elevator Pitch</a>
+      <a href="#dev-plan" class="block-nav__item" data-block="dev">Dev Plan</a>
+      <a href="#raci" class="block-nav__item" data-block="raci">RACI</a>
+      <a href="#scope" class="block-nav__item" data-block="scope">Scope</a>
+      <a href="#gantt" class="block-nav__item" data-block="gantt">Gantt</a>
+      <a href="#risk-register" class="block-nav__item" data-block="risks">Risks</a>
+      <a href="#issue-log" class="block-nav__item" data-block="issues">Issues</a>
+    </nav>
+  </header>
+  <nav class="screen-nav" aria-label="Екрани презентації">
+    <a href="#hero" class="active" aria-current="location" aria-label="Початок"><span>Початок</span></a>
+    <a href="#concept" aria-label="Концепт гри"><span>Концепт гри</span></a>
+    <a href="#game-loop" aria-label="Game loop"><span>Game loop</span></a>
+    <a href="#gameplay" aria-label="Геймплей на мобільному"><span>Геймплей на мобільному</span></a>
+    <a href="#difficulty" aria-label="Розвиток складності"><span>Розвиток складності</span></a>
+    <a href="#audience" aria-label="Цільова аудиторія"><span>Цільова аудиторія</span></a>
+    <a href="#monetization" aria-label="Монетизація"><span>Монетизація</span></a>
+    <a href="#slice" aria-label="Бюджет Vertical Slice"><span>Бюджет Vertical Slice</span></a>
+    <a href="#dev-plan" aria-label="Development Plan"><span>Development Plan</span></a>
+    <a href="#dev-stage-1" aria-label="Етапи 1 і 2"><span>Етапи 1–2</span></a>
+    <a href="#dev-stage-3" aria-label="Етап 3"><span>Етап 3</span></a>
+    <a href="#raci" aria-label="RACI Matrix"><span>RACI Matrix</span></a>
+    <a href="#raci-team-1" aria-label="RACI: ключова команда"><span>Ключова команда</span></a>
+    <a href="#raci-team-2" aria-label="RACI: підтримка і бізнес"><span>Підтримка і бізнес</span></a>
+    <a href="#scope" aria-label="Scope Management Plan"><span>Scope Management Plan</span></a>
+    <a href="#scope-diagram" aria-label="Scope Diagram"><span>Scope Diagram</span></a>
+    <a href="#gantt" aria-label="Gantt Diagram"><span>Gantt Diagram</span></a>
+    <a href="#gantt-diagram" aria-label="Повний виробничий план"><span>Виробничий план</span></a>
+    <a href="#risk-register" aria-label="Risk Register"><span>Risk Register</span></a>
+    <a href="#risk-register-table" aria-label="Risk Register table"><span>Таблиця ризиків</span></a>
+    <a href="#issue-log" aria-label="Issue Log"><span>Issue Log</span></a>
+    <a href="#issue-log-table" aria-label="Issue Log table"><span>Таблиця issues</span></a>
+  </nav>
+  <main>
+    <section id="hero" class="screen hero" data-screen>
+      <div class="hero__shade"></div>
+      <div class="wrap hero__content reveal">
+        <p class="kicker"><span></span> MOBILE GAME · ELEVATOR PITCH</p>
+        <img class="hero__logo" src="assets/logo.png" alt="Purrcelain Panic">
+        <h1>Спіймай комаху.<br>Збережи бабусину порцеляну.</h1>
+        <p class="hero__meta">Physics-based hyper-casual mobile game</p>
+        <div class="platforms" aria-label="Заплановані платформи">
+          <img class="official-badge" src="assets/app-store-badge.svg" alt="Download on the App Store">
+          <img class="official-badge" src="assets/google-play-badge.svg" alt="Get it on Google Play">
+        </div>
+      </div>
+      <span class="screen-count">01 / 08</span>
+      <a class="next" href="#concept" aria-label="До концепту гри"><i></i></a>
+    </section>
+
+    <section id="concept" class="screen pitch-screen pitch-screen--concept" data-screen>
+      <div class="wrap pitch-content reveal"><div class="pitch-copy"><h2>Концепт гри</h2><p class="pitch-lead">Гравець керує котом старенької колекціонерки порцеляни. Кімнатою літають комахи, і кіт має спіймати їх, не розбивши бабусину колекцію.</p><div class="pitch-facts"><p><b>Жанр:</b> physics-based hyper-casual arcade</p><p><b>Платформа:</b> iOS та Android</p><p><b>Рушій:</b> Unity</p><p><b>Формат:</b> вертикальний екран, керування одним пальцем</p></div></div></div>
+      <a class="next" href="#game-loop" aria-label="До Game loop"><i></i></a>
+    </section>
+
+    <section id="game-loop" class="screen pitch-screen pitch-screen--game-loop" data-screen>
+      <div class="wrap pitch-content reveal"><div class="pitch-loop-layout"><div class="pitch-copy pitch-loop-copy"><section class="pitch-card pitch-card--intro"><h2>Game loop</h2><p class="pitch-lead">Затисни кота, задай напрямок і силу стрибка, потім відпусти.</p></section><section class="pitch-card pitch-card--stages"><ol class="pitch-steps"><li>Побачити комаху</li><li>Розрахувати стрибок</li><li>Спіймати здобич</li><li>Безпечно приземлитися</li></ol></section><p class="pitch-card pitch-card--note pitch-footnote">Керування одним пальцем. Один рівень 30-60 секунд.</p></div></div></div>
+      <a class="next" href="#gameplay" aria-label="До Геймплей на мобільному"><i></i></a>
+    </section>
+
+    <section id="gameplay" class="screen pitch-screen pitch-screen--gameplay" data-screen>
+      <div class="wrap pitch-content reveal"><div class="pitch-center gameplay-header"><h2>Геймплей на мобільному</h2><p class="pitch-lead">Один дотик запускає весь цикл гри.</p></div><div class="phone-steps"><article class="phone-step"><div class="phone-frame phone-frame--one" role="img" aria-label="Кіт прицілюється"></div><div class="step-caption"><h3>Прицілюйся</h3></div></article><article class="phone-step"><div class="phone-frame phone-frame--two" role="img" aria-label="Кіт ловить комаху"></div><div class="step-caption"><h3>Лови</h3></div></article><article class="phone-step"><div class="phone-frame phone-frame--three" role="img" aria-label="Кіт уникає руйнувань"></div><div class="step-caption"><h3>Уникай руйнувань</h3></div></article></div></div>
+      <a class="next" href="#difficulty" aria-label="До Розвиток складності"><i></i></a>
+    </section>
+
+    <section id="difficulty" class="screen pitch-screen pitch-screen--difficulty" data-screen>
+      <div class="wrap pitch-content reveal"><div class="pitch-copy difficulty-copy"><h2>Розвиток складності</h2><p class="pitch-lead">Кожен новий рівень підвищує ризик, але зберігає просте керування.</p><ol class="pitch-steps"><li>Швидші комахи</li><li>Більше крихких предметів</li><li>Рухомі полиці та слизькі поверхні</li><li>Нові кімнати й коти</li><li>Вищий ризик - більша винагорода</li></ol><p class="pitch-note difficulty-note">Три розбиті речі - бабуся заходить у кімнату, рівень завершено.</p></div></div>
+      <a class="next" href="#audience" aria-label="До Цільова аудиторія"><i></i></a>
+    </section>
+
+    <section id="audience" class="screen pitch-screen pitch-screen--audience" data-screen>
+      <div class="wrap pitch-content reveal"><div class="pitch-split"><div class="pitch-illustration pitch-audience" role="img" aria-label="Три покоління жінок грають у мобільні ігри"></div><div class="pitch-copy"><h2>Цільова аудиторія</h2><p class="pitch-subtitle">Початкова гіпотеза для тестування</p><div class="pitch-detail"><h3>Основна аудиторія</h3><p>Дівчата та жінки 13–65 років, які люблять котів, cozy-візуал і прості мобільні ігри.</p><h3>Що їх об’єднує</h3><p>Короткі ігрові сесії, зрозуміле керування, милі персонажі та відсутність складного навчання.</p><h3>Ключові мотиватори</h3><p>Кумедна фізика, кастомізація, колекціонування та нові тематичні світи.</p><h3>Сімейний потенціал</h3><p>Гра може зацікавити дітей від 7 років, але реклама й покупки потребують батьківського контролю.</p></div></div></div></div><img class="audience-cat" src="assets/audience-cat.png" alt="" aria-hidden="true">
+      <a class="next" href="#monetization" aria-label="До Монетизація"><i></i></a>
+    </section>
+
+    <section id="monetization" class="screen pitch-screen pitch-screen--monetization" data-screen>
+      <div class="wrap pitch-content reveal"><div class="pitch-split"><div class="pitch-illustration pitch-monetization" role="img" aria-label="Коти різного віку та аксесуари"></div><div class="pitch-copy"><h2>Монетизація</h2><p class="pitch-subtitle">Косметика змінює вигляд гри, але не дає переваги в проходженні.</p><div class="pitch-detail"><h3>Вік кота</h3><p>Кошеня, дорослий кіт, старенький кіт. Кошеня — найдорожчий преміум-варіант.</p><h3>Кастомізація</h3><p>Породи, забарвлення, кашкети та одяг.</p><h3>Колекції об’єктів</h3><p>Порцеляна, фоторамки, глечики, лабораторний посуд.</p><h3>Тематичні світи</h3><p>Будинок бабусі, квіткова крамниця, бус, ферма, лабораторія.</p><p class="pitch-note"><b>Модель:</b> внутрішня валюта, rewarded ads, in-app purchases, тематичні набори.</p></div></div></div></div>
+      <a class="next" href="#slice" aria-label="До Бюджет Vertical Slice"><i></i></a>
+    </section>
+
+    <section id="slice" class="screen pitch-screen pitch-screen--slice" data-screen>
+      <div class="wrap pitch-content reveal"><div class="pitch-copy slice-copy"><h2>Бюджет Vertical Slice</h2><p class="pitch-subtitle">Попередня оцінка</p><div class="slice-details"><div class="budget"><strong>$25 300</strong><span>Вилка: $22 800–27 800 (±10%)</span></div><h3 class="pitch-duration">Термін: 13 тижнів</h3><p class="slice-schedule">Тижні 3-13 проєкту. Готовність наприкінці 13-го тижня.</p><p class="pitch-lead">Один завершений показовий рівень. Тестові збірки Android та iOS.</p></div></div></div>
+      <a class="next" href="#dev-plan" aria-label="До Development Plan"><i></i></a>
+    </section>
+
+    <section id="dev-plan" class="dev-plan pp-ui pp-section pp-section--art dev-cover" style="--pp-art:url('assets/dev-plan-cover.png')" data-screen>
+      <div class="pp-wrap">
+        <div class="pp-copy pp-stack dev-cover-copy">
+          <img class="dev-logo" src="assets/dev-plan-logo.png" alt="Purrcelain Panic">
+          <p class="dev-cover-label">Development Plan</p>
+          <p class="pp-lead">Від концепту до вертикального зрізу</p>
+          <div class="pp-panel pp-panel--light dev-summary">
+            <p><span>01</span> Концепт і планування</p>
+            <p><span>02</span> Ігровий прототип</p>
+            <p><span>03</span> Вертикальний зріз</p>
+          </div>
+          <a class="dev-master-link" href="https://docs.google.com/spreadsheets/d/1WquavUikh5NpupMbyY4uh4J-bMsilNdbfyRHNXgfUuw/edit?gid=0#gid=0&amp;range=A1:C1" target="_blank" rel="noreferrer">Відкрити Master Doc ↗</a>
+        </div>
+      </div>
+      <a class="next" href="#dev-stage-1" aria-label="До першого етапу"><i></i></a>
+    </section>
+
+    <section id="dev-stage-1" class="dev-plan pp-ui pp-section pp-section--dots dev-stage dev-stage--combined" data-screen>
+      <div class="pp-wrap pp-stack dev-combined-wrap">
+        <div class="dev-stage-block dev-stage-block--one">
+          <div class="dev-heading">
+            <h2 class="pp-title pp-title--compact pp-title--optical">Етап 1 · Концепт і планування</h2>
+            <p class="pp-heading">тижні 1-2</p>
+          </div>
+          <div class="dev-layout">
+            <aside class="pp-panel pp-stack">
+              <h3 class="pp-heading">Опис етапу</h3>
+              <p class="pp-body">Уточнюємо правила гри, керування, умови перемоги та поразки, візуальний напрям і межі першого релізу. Перевіряємо конкурентів та гіпотезу аудиторії з пітча: дівчата й жінки 13-65 років, які люблять котів і прості затишні ігри. Готуємо короткий game design document, бюджет, план робіт і критерії перевірки прототипу. Результат етапу: погоджений концепт із конкретним обсягом розробки.</p>
+            </aside>
+            <div class="pp-table-wrap" role="region" aria-label="Роботи етапу 1" tabindex="0">
+              <table class="pp-table"><caption>Роботи, ролі та завантаження</caption><thead><tr><th scope="col">Activity</th><th scope="col">Role</th><th scope="col">Load</th></tr></thead><tbody>
+                <tr><th scope="row">Визначення меж проєкту, цільової аудиторії та плану виробництва</th><td>Producer / PM</td><td>Full-time 100%</td></tr>
+                <tr><th scope="row">Основний ігровий цикл, GDD і базова прогресія</th><td>Game Designer</td><td>Full-time 100%</td></tr>
+                <tr><th scope="row">Технічна реалізація та архітектура</th><td>Senior Unity Dev</td><td>Part-time 50%</td></tr>
+                <tr><th scope="row">Візуальний напрям і вимоги до асетів</th><td>Senior 2D Artist</td><td>Part-time 50%</td></tr>
+                <tr><th scope="row">Дослідження ринку та план UA-тестування</th><td>UA Manager</td><td>Part-time 25%</td></tr>
+              </tbody></table>
+            </div>
+          </div>
+        </div>
+
+        <div class="dev-stage-block dev-stage-block--two">
+          <div class="dev-heading">
+            <h2 class="pp-title pp-title--compact pp-title--optical">Етап 2 · Ігровий прототип</h2>
+            <p class="pp-heading">тижні 3-4</p>
+          </div>
+          <div class="dev-layout">
+            <aside class="pp-panel pp-stack">
+              <h3 class="pp-heading">Опис етапу</h3>
+              <p class="pp-body">Створюємо робочий прототип із тимчасовою графікою: прицілювання, стрибок, ловіння комах, зіткнення з предметами та перезапуск. Перевіряємо, чи зрозуміле керування, чи передбачувана фізика та чи хочеться повторити спробу. Проводимо короткі тести з потенційними гравцями. До наступної стадії переходимо, коли основна механіка працює і викликає інтерес.</p>
+            </aside>
+            <div class="pp-table-wrap" role="region" aria-label="Роботи етапу 2" tabindex="0">
+              <table class="pp-table"><caption>Роботи, ролі та завантаження</caption><thead><tr><th scope="col">Activity</th><th scope="col">Role</th><th scope="col">Load</th></tr></thead><tbody>
+                <tr><th scope="row">Ігровий цикл і керування</th><td>Senior Unity Dev</td><td>Full-time 100%</td></tr>
+                <tr><th scope="row">Прототип фізики, колізій і логіки перезапуску</th><td>Senior Unity Dev + Game Designer</td><td>Full-time 100% / Full-time 100%</td></tr>
+                <tr><th scope="row">Тимчасові візуальні елементи</th><td>Senior 2D Artist</td><td>Part-time 25%</td></tr>
+                <tr><th scope="row">Внутрішнє QA та ігрові тестування</th><td>Middle QA</td><td>Part-time 25%</td></tr>
+                <tr><th scope="row">Перевірка привабливості прототипу для ринку</th><td>UA Manager</td><td>Part-time 25%</td></tr>
+                <tr><th scope="row">Stage check: затвердження меж vertical slice</th><td>Producer / PM</td><td>Full-time 100%</td></tr>
+              </tbody></table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img class="dev-plan-cat" src="assets/cat-orange.png" alt="" aria-hidden="true">
+      <a class="next" href="#dev-stage-3" aria-label="До третього етапу"><i></i></a>
+    </section>
+
+    <section id="dev-stage-3" class="dev-plan pp-ui pp-section pp-section--dots dev-stage" data-screen>
+      <div class="pp-wrap pp-stack">
+        <div class="dev-heading">
+          <h2 class="pp-title pp-title--compact pp-title--optical">Етап 3 · Вертикальний зріз</h2>
+          <p class="pp-heading">тижні 3-13</p>
+        </div>
+        <div class="dev-layout">
+          <div class="dev-stage-3-side">
+            <aside class="pp-panel pp-stack">
+              <h3 class="pp-heading">Опис етапу</h3>
+              <p class="pp-body">Робимо один завершений показовий рівень із цільовою якістю графіки, анімації, звуку та інтерфейсу. Додаємо кілька варіантів розташування предметів для тестування, просте навчання й базові аналітичні події. Перевіряємо продуктивність на Android та iOS, запускаємо перші рекламні тести з реальним геймплеєм. Результат: збірка, яка показує якість майбутньої гри та дозволяє оцінити вартість подальшого виробництва.</p>
+            </aside>
+            <img class="dev-stage-3-cat" src="assets/dev-stage-3-cat.png" alt="" aria-hidden="true">
+          </div>
+          <div class="pp-table-wrap" role="region" aria-label="Роботи етапу 3" tabindex="0">
+            <table class="pp-table"><caption>Роботи, ролі та завантаження</caption><thead><tr><th scope="col">Activity</th><th scope="col">Role</th><th scope="col">Load</th></tr></thead><tbody>
+              <tr><th scope="row">Game ready рівень</th><td>Game Designer</td><td>Full-time 100%</td></tr>
+              <tr><th scope="row">Інтеграція графіки, інтерфейсу, анімацій і базового звуку</th><td>Senior Unity Dev</td><td>Full-time 100%</td></tr>
+              <tr><th scope="row">Створення арт-пакета: кіт, кімната, комахи та порцеляна</th><td>Senior 2D Artist</td><td>Full-time 100%</td></tr>
+              <tr><th scope="row">Анімації кота, реакції та візуальний зворотний зв'язок</th><td>Middle 2D Animator</td><td>Part-time 50%</td></tr>
+              <tr><th scope="row">Аналітика та технічна оптимізація</th><td>Senior Unity Dev + Product Analyst</td><td>Full-time 100% / Part-time 25%</td></tr>
+              <tr><th scope="row">Функціональне тестування на пристроях</th><td>Middle QA</td><td>Part-time 50%</td></tr>
+              <tr><th scope="row">Перші рекламні креативи та UA-тест</th><td>UA Manager + Motion Designer</td><td>Part-time 25% / Part-time 25%</td></tr>
+              <tr><th scope="row">Stage check: рішення щодо переходу до повного виробництва</th><td>Producer / PM</td><td>Full-time 100%</td></tr>
+            </tbody></table>
+          </div>
+        </div>
+      </div>
+      <a class="next next--large" href="#raci" aria-label="До RACI Matrix"><i></i></a>
+    </section>
+
+    <section id="raci" class="raci pp-ui pp-section pp-section--art raci-cover" style="--pp-art:url('assets/raci-cover.png')" data-screen>
+      <div class="raci-cover__shade"></div>
+      <div class="pp-wrap raci-cover__content reveal">
+        <img class="raci-logo" src="assets/raci-logo.png" alt="Purrcelain Panic">
+        <p class="pp-eyebrow">PROJECT RESPONSIBILITY MAP</p>
+        <h2 class="pp-title pp-title--optical">RACI Matrix</h2>
+        <div class="raci-info-panel pp-panel pp-panel--light">
+          <p class="raci-cover__lead">Хто приймає рішення, хто виконує роботу, кого залучаємо до консультацій і кого тримаємо в курсі.</p>
+          <div class="raci-key" aria-label="Розшифрування RACI">
+            <span class="raci-chip"><b>R</b> Responsible</span><span class="raci-chip"><b>A</b> Accountable</span><span class="raci-chip"><b>C</b> Consulted</span><span class="raci-chip"><b>I</b> Informed</span>
+          </div>
+        </div>
+        <a class="dev-master-link" href="https://docs.google.com/spreadsheets/d/1WquavUikh5NpupMbyY4uh4J-bMsilNdbfyRHNXgfUuw/edit?gid=1200696025#gid=1200696025&amp;range=A3" target="_blank" rel="noopener">Відкрити Master Doc ↗</a>
+      </div>
+      <a class="next next--large" href="#raci-team-1" aria-label="До ключової команди"><i></i></a>
+    </section>
+
+    <section id="raci-team-1" class="raci pp-ui pp-section pp-section--dots raci-stage" data-screen>
+      <div class="pp-wrap pp-stack">
+        <div class="raci-heading">
+          <div><h2 class="pp-title pp-title--compact pp-title--optical">Core Team</h2></div>
+        </div>
+        <div class="pp-table-wrap raci-table-wrap" role="region" aria-label="RACI ключової команди" tabindex="0">
+          <table class="pp-table raci-table"><thead><tr><th scope="col">Position</th><th scope="col">RACI</th><th scope="col">Duties</th></tr></thead><tbody>
+            <tr><th scope="row">Producer / PM</th><td><span class="raci-badges" aria-label="Accountable, Responsible"><span class="raci-badge raci-badge--a" title="Accountable">A</span><span class="raci-badge raci-badge--r" title="Responsible">R</span></span></td><td>Project ownership, scope, schedule, budget, risks, communication</td></tr>
+            <tr><th scope="row">Game Designer</th><td><span class="raci-badges" aria-label="Accountable, Responsible"><span class="raci-badge raci-badge--a" title="Accountable">A</span><span class="raci-badge raci-badge--r" title="Responsible">R</span></span></td><td>Core loop, game feel, rules, balance, levels, progression, tutorial</td></tr>
+            <tr><th scope="row">Senior Unity Developer</th><td><span class="raci-badges" aria-label="Responsible, Consulted"><span class="raci-badge raci-badge--r" title="Responsible">R</span><span class="raci-badge raci-badge--c" title="Consulted">C</span></span></td><td>Technical architecture, prototype, core systems, feasibility checks</td></tr>
+            <tr><th scope="row">Middle Unity Developer</th><td><span class="raci-badges" aria-label="Responsible"><span class="raci-badge raci-badge--r" title="Responsible">R</span></span></td><td>Production features, shop, ads, saves, implementation tasks</td></tr>
+            <tr><th scope="row">Senior 2D Artist</th><td><span class="raci-badges" aria-label="Responsible, Consulted"><span class="raci-badge raci-badge--r" title="Responsible">R</span><span class="raci-badge raci-badge--c" title="Consulted">C</span></span></td><td>Visual direction, cats, interiors, porcelain assets, final art quality</td></tr>
+            <tr><th scope="row">Middle 2D Animator</th><td><span class="raci-badges" aria-label="Responsible"><span class="raci-badge raci-badge--r" title="Responsible">R</span></span></td><td>Cat animation, insect animation, porcelain reactions, visual feedback</td></tr>
+            <tr><th scope="row">UI/UX Designer</th><td><span class="raci-badges" aria-label="Responsible, Consulted"><span class="raci-badge raci-badge--r" title="Responsible">R</span><span class="raci-badge raci-badge--c" title="Consulted">C</span></span></td><td>Interface, player onboarding, shop flow, progression screens, settings</td></tr>
+          </tbody></table>
+        </div>
+      </div>
+      <img class="raci-edge-cat raci-edge-cat--right" src="assets/cat-orange.png" alt="" aria-hidden="true">
+      <a class="next next--large" href="#raci-team-2" aria-label="До підтримки і бізнесу"><i></i></a>
+    </section>
+
+    <section id="raci-team-2" class="raci pp-ui pp-section pp-section--dots raci-stage" data-screen>
+      <div class="pp-wrap pp-stack">
+        <div class="raci-heading">
+          <div><h2 class="pp-title pp-title--compact pp-title--optical">Підтримка і бізнес</h2></div>
+        </div>
+        <div class="pp-table-wrap raci-table-wrap" role="region" aria-label="RACI підтримки і бізнесу" tabindex="0">
+          <table class="pp-table raci-table"><thead><tr><th scope="col">Position</th><th scope="col">RACI</th><th scope="col">Duties</th></tr></thead><tbody>
+            <tr><th scope="row">Middle QA Engineer</th><td><span class="raci-badges" aria-label="Responsible"><span class="raci-badge raci-badge--r" title="Responsible">R</span></span></td><td>Build testing, bug reports, regression testing, IAP, ads, saves</td></tr>
+            <tr><th scope="row">UA Manager</th><td><span class="raci-badges" aria-label="Responsible, Consulted"><span class="raci-badge raci-badge--r" title="Responsible">R</span><span class="raci-badge raci-badge--c" title="Consulted">C</span></span></td><td>User acquisition tests, CPI, channels, soft launch campaigns</td></tr>
+            <tr><th scope="row">Motion Designer</th><td><span class="raci-badges" aria-label="Responsible"><span class="raci-badge raci-badge--r" title="Responsible">R</span></span></td><td>Ad videos, store promo assets, playable-style creative</td></tr>
+            <tr><th scope="row">Product Analyst</th><td><span class="raci-badges" aria-label="Responsible, Consulted"><span class="raci-badge raci-badge--r" title="Responsible">R</span><span class="raci-badge raci-badge--c" title="Consulted">C</span></span></td><td>Retention, CPI, LTV, funnel analysis, player behavior insights</td></tr>
+            <tr><th scope="row">Sound Designer</th><td><span class="raci-badges" aria-label="Responsible"><span class="raci-badge raci-badge--r" title="Responsible">R</span></span></td><td>Cat sounds, porcelain hits, UI sounds, satisfying audio cues</td></tr>
+            <tr><th scope="row">Community Support</th><td><span class="raci-badges" aria-label="Responsible, Informed"><span class="raci-badge raci-badge--r" title="Responsible">R</span><span class="raci-badge raci-badge--i" title="Informed">I</span></span></td><td>Player feedback, store reviews, support issues after launch</td></tr>
+            <tr><th scope="row">Investor / Sponsor</th><td><span class="raci-badges" aria-label="Accountable, Informed"><span class="raci-badge raci-badge--a" title="Accountable">A</span><span class="raci-badge raci-badge--i" title="Informed">I</span></span></td><td>Funding, key approvals, progress visibility, business-level decisions</td></tr>
+          </tbody></table>
+        </div>
+      </div>
+      <img class="raci-edge-cat raci-edge-cat--left" src="assets/cat-white.png" alt="" aria-hidden="true">
+      <a class="next next--large" href="#scope" aria-label="До Scope Management Plan"><i></i></a>
+    </section>
+
+    <section id="scope" class="scope pp-ui pp-section pp-section--art scope-cover" style="--pp-art:url('assets/issue-cover.png')" data-screen>
+      <div class="scope-cover__shade"></div>
+      <div class="pp-wrap scope-cover__content reveal">
+        <img class="scope-logo" src="assets/raci-logo.png" alt="Purrcelain Panic">
+        <p class="pp-eyebrow">PROJECT SCOPE MAP</p>
+        <h2 class="pp-title pp-title--optical">Scope Management Plan</h2>
+        <div class="scope-summary pp-panel pp-panel--light">
+          <p class="scope-cover__lead">Визначаємо межі проєкту, ключові результати та взаємозв’язки між частинами роботи, щоб команда рухалась в одному напрямку.</p>
+        </div>
+        <a class="scope-cover__link" href="https://www.figma.com/design/6vw6fRcNWT3lZbaY8FZmvu/Scope-Diagram?node-id=0-1&amp;t=HXxAVoRUrI2B6Yx9-1" target="_blank" rel="noopener">Відкрити Scope Diagram у Figma ↗</a>
+      </div>
+      <a class="next next--large" href="#scope-diagram" aria-label="До Scope Diagram"><i></i></a>
+    </section>
+
+    <section id="scope-diagram" class="scope pp-ui pp-section pp-section--dots scope-diagram" data-screen>
+      <div class="pp-wrap pp-stack">
+        <div class="scope-heading">
+          <div>
+            <p class="pp-eyebrow">SCOPE MANAGEMENT PLAN</p>
+            <h2 class="pp-title pp-title--compact pp-title--optical">Scope Diagram</h2>
+          </div>
+          <a class="scope-heading__link" href="https://www.figma.com/design/6vw6fRcNWT3lZbaY8FZmvu/Scope-Diagram?node-id=0-1&amp;t=HXxAVoRUrI2B6Yx9-1" target="_blank" rel="noopener">Відкрити у Figma ↗</a>
+        </div>
+        <div class="scope-embed pp-panel pp-panel--light">
+          <div class="scope-embed__frame">
+            <iframe src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Fdesign%2F6vw6fRcNWT3lZbaY8FZmvu%2FScope-Diagram%3Fnode-id%3D0-1%26t%3DHXxAVoRUrI2B6Yx9-1" title="Scope Management Plan — Figma diagram" loading="lazy" allowfullscreen></iframe>
+          </div>
+          <p class="scope-embed__note">Якщо вбудований перегляд не завантажиться, відкрий діаграму окремо у Figma.</p>
+        </div>
+      </div>
+      <a class="next next--large" href="#gantt" aria-label="До Gantt Diagram"><i></i></a>
+    </section>
+
+    <section id="gantt" class="gantt pp-ui pp-section pp-section--art gantt-cover" style="--pp-art:url('assets/gantt-cover.png')" data-screen>
+      <div class="gantt-cover__shade"></div>
+      <div class="pp-wrap gantt-cover__content reveal">
+        <img class="gantt-logo" src="assets/raci-logo.png" alt="Purrcelain Panic">
+        <p class="pp-eyebrow">PROJECT DELIVERY TIMELINE</p>
+        <h2 class="pp-title pp-title--optical">Gantt Diagram</h2>
+        <div class="gantt-cover__summary pp-panel pp-panel--light">
+          <p class="gantt-cover__lead">13-тижневий план Vertical Slice з точним порядком задач, паралельними процесами та тривалістю в робочих днях.</p>
+          <div class="gantt-cover__stats" aria-label="Параметри виробничого плану">
+            <span><b>44</b> tasks</span><span><b>8</b> stages</span><span><b>65</b> workdays</span>
+          </div>
+        </div>
+        <a class="gantt-cover__link" href="https://docs.google.com/spreadsheets/d/1WquavUikh5NpupMbyY4uh4J-bMsilNdbfyRHNXgfUuw/edit?gid=431974028#gid=431974028&amp;range=A1" target="_blank" rel="noopener">Відкрити Gantt у Master Doc ↗</a>
+      </div>
+      <a class="next next--large" href="#gantt-diagram" aria-label="До повної діаграми Ганта"><i></i></a>
+    </section>
+
+    <section id="gantt-diagram" class="gantt pp-ui pp-section pp-section--dots gantt-diagram" data-screen>
+      <div class="pp-wrap pp-stack gantt-diagram__wrap">
+        <div class="gantt-diagram__heading">
+          <div>
+            <p class="pp-eyebrow">VERTICAL SLICE · 13 WEEKS</p>
+            <h2 class="pp-title pp-title--compact pp-title--optical">Production Timeline</h2>
+          </div>
+          <div class="gantt-diagram__stats" aria-label="Параметри плану">
+            <span><b>44</b> tasks</span><span><b>8</b> stages</span><span><b>65</b> workdays</span>
+          </div>
+        </div>
+        <div class="gantt-shell" id="gantt-shell" role="region" aria-label="Повна діаграма Ганта з горизонтальним та вертикальним прокручуванням" tabindex="0">
+          <div id="gantt-board" class="gantt-board" role="table" aria-label="Purrcelain Panic Vertical Slice Gantt Diagram"></div>
+        </div>
+        <div class="gantt-footer">
+          <p>Позиції капсул відповідають кольоровим клітинкам оригінальної таблиці.</p>
+          <a href="https://docs.google.com/spreadsheets/d/1WquavUikh5NpupMbyY4uh4J-bMsilNdbfyRHNXgfUuw/edit?gid=431974028#gid=431974028&amp;range=A1" target="_blank" rel="noopener">Відкрити Master Doc ↗</a>
+        </div>
+      </div>
+      <a class="next next--large" href="#risk-register" aria-label="До Risk Register"><i></i></a>
+    </section>
+
+    <section id="risk-register" class="risk-issue pp-ui pp-section pp-section--art gov-cover" style="--pp-art:url('assets/risk-cover.png')" data-screen>
+      <div class="gov-cover__shade"></div>
+      <div class="pp-wrap gov-cover__content reveal">
+        <img class="gov-logo" src="assets/raci-logo.png" alt="Purrcelain Panic">
+        <p class="pp-eyebrow">PROJECT RISK REGISTER</p>
+        <h2 class="pp-title pp-title--optical">Risk Register</h2>
+        <div class="gov-cover__summary pp-panel pp-panel--light">
+          <p class="gov-cover__lead">Фіксуємо ключові ризики Vertical Slice, їхню ймовірність, вплив, власників і план реагування.</p>
+        </div>
+        <a class="gov-cover__link" href="#risk-register-table">Відкрити Risk Register ↗</a>
+      </div>
+      <a class="next next--large" href="#risk-register-table" aria-label="До таблиці ризиків"><i></i></a>
+    </section>
+
+    <section id="risk-register-table" class="risk-issue pp-ui pp-section pp-section--dots gov-table-screen" data-screen>
+      <div class="pp-wrap pp-stack">
+        <div class="gov-table__heading">
+          <div><p class="pp-eyebrow">RISK REGISTER · VERTICAL SLICE</p><h2 class="pp-title pp-title--compact pp-title--optical">Risk Register</h2></div>
+          <p class="gov-table__note">Поточні ризики, відповідальні власники та дії для збереження плану виробництва.</p>
+        </div>
+        <div class="gov-table-wrap">
+          <table class="gov-table gov-table--risks">
+            <thead><tr><th>Risk Description</th><th>Probability</th><th>Impact</th><th>Owner</th><th>Strategy</th><th>Action Plan</th><th>Top 3</th><th>Reserve</th></tr></thead>
+            <tbody>
+              <tr><td>Lead Artist може бути перевантажений під час Art Concept, Asset Production <span class="gov-risk-category">Category: People</span></td><td>High</td><td>High</td><td>Producer / PM</td><td>Avoid</td><td><ul><li>Перед стартом перевірити доступний ресурс</li><li>Розподілити паралельні таски між артистами</li><li>Мати постійного помічника для ліда артиста</li></ul></td><td>Yes</td><td>2-3 дні резерву на бек-ап артистів</td></tr>
+              <tr><td>Senior Dev може стати недоступним під час Unity Integration. <span class="gov-risk-category">Category: People</span></td><td>Medium</td><td>High</td><td>Tech Lead</td><td>Mitigate</td><td><ul><li>Задокументувати сетап</li><li>Підключити другого дева до інтеграції</li><li>Призначити бек-ап овнера для білду та імпорту тасків</li></ul></td><td>No</td><td>1 день резерву дев-ресурсу</td></tr>
+              <tr><td>Spine-анімації можуть імпортуватися в Unity з неправильною scale, pivot або timing подій. <span class="gov-risk-category">Category: Tech</span></td><td>High</td><td>High</td><td>Senior Dev</td><td>Mitigate</td><td><ul><li>До повного проходження протестувати одну анімацію кота і одну анімацію комахи</li><li>Зафіксувати налаштування експорту</li><li>Зробити маленький прототип імпорту</li></ul></td><td>Yes</td><td>3 дні резерву в графіку перед тестуванням</td></tr>
+              <tr><td>Playable level може працювати повільно або HUD може зламатися на менших mobile screens. <span class="gov-risk-category">Category: Tech</span></td><td>Medium</td><td>High</td><td>Senior Dev + UI/UX</td><td>Mitigate</td><td><ul><li>Прийняти ризик можливих змін після апруву</li><li>Додаткові запити додавати тільки в наступний етап або окремим чейндж-реквестом</li></ul></td><td>No</td><td>1 день на тестування девайсів та оптимізацію</td></tr>
+              <tr><td>Stakeholder може запросити зміни до level scope, key visuals або power-ups після approval. <span class="gov-risk-category">Category: Client</span></td><td>Medium</td><td>High</td><td>Producer / PM</td><td>Accept</td><td><ul><li>Прийняти ризик можливих змін після апруву</li><li>Додаткові запити додавати тільки в наступний етап або окремим чейндж-реквестом</li></ul></td><td>No</td><td>1 день на погодження змін</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3 class="gov-subheading">Top 3 Risk Reserves та Gantt Changes</h3>
+        <div class="gov-table-wrap gov-table-wrap--compact">
+          <table class="gov-table gov-table--reserves"><thead><tr><th>Risk</th><th>Reserve type</th><th>Reserve</th><th>Gantt change</th></tr></thead><tbody>
+            <tr><td>Перевантаження команди</td><td>Ресурси</td><td>Бек-ап артист або аніматор на 2-3 дні</td><td>Розділити паралельні арт-таски між овнерами; додати перевірку ресурсу перед стартом продакшену.</td></tr>
+            <tr><td>Імпорт анімації в Unity</td><td>Час + технічний ресурс</td><td>3 дні технічного буфера</td><td>Додати ранній тест імпорту перед передачею всіх анімацій і залишити 3 дні технічного буфера перед завершенням інтеграції.</td></tr>
+            <tr><td>Неточні оцінки</td><td>Час</td><td>3 дні резерву в графіку</td><td>Додати 3 дні резерву перед тестуванням і не ставити його одразу після планового завершення інтеграції.</td></tr>
+          </tbody></table>
+        </div>
+        <div class="gov-table-footer"><p>Risk review: переглядати register на старті кожного stage та після кожної зміни scope або dependency.</p><a href="https://docs.google.com/spreadsheets/d/1WquavUikh5NpupMbyY4uh4J-bMsilNdbfyRHNXgfUuw/edit?gid=1269724355#gid=1269724355&amp;range=A1:J1" target="_blank" rel="noopener">Відкрити Master Doc ↗</a></div>
+      </div>
+      <a class="next next--large" href="#issue-log" aria-label="До Issue Log"><i></i></a>
+    </section>
+
+    <section id="issue-log" class="risk-issue pp-ui pp-section pp-section--art gov-cover" style="--pp-art:url('assets/issue-cover.png')" data-screen>
+      <div class="gov-cover__shade"></div>
+      <div class="pp-wrap gov-cover__content reveal">
+        <img class="gov-logo" src="assets/raci-logo.png" alt="Purrcelain Panic">
+        <p class="pp-eyebrow">PROJECT ISSUE TRACKER</p>
+        <h2 class="pp-title pp-title--optical">Issue Log</h2>
+        <div class="gov-cover__summary pp-panel pp-panel--light"><p class="gov-cover__lead">Відстежуємо issues, які вже виникли під час production, їхній пріоритет, власників і поточний статус.</p></div>
+        <a class="gov-cover__link" href="#issue-log-table">Відкрити Issue Log ↗</a>
+      </div>
+      <a class="next next--large" href="#issue-log-table" aria-label="До таблиці issues"><i></i></a>
+    </section>
+
+    <section id="issue-log-table" class="risk-issue pp-ui pp-section pp-section--dots gov-table-screen" data-screen>
+      <div class="pp-wrap pp-stack">
+        <div class="gov-table__heading"><div><p class="pp-eyebrow">ISSUE LOG · VERTICAL SLICE</p><h2 class="pp-title pp-title--compact pp-title--optical">Issue Log</h2></div><p class="gov-table__note">Issues, що вже впливають на production одного playable Vertical Slice level.</p></div>
+        <div class="gov-table-wrap"><table class="gov-table gov-table--issues"><thead><tr><th>Issue</th><th>Category</th><th>Impact</th><th>Priority</th><th>Owner</th><th>Action Plan</th><th>Due Date</th><th>Status</th></tr></thead><tbody>
+          <tr><td>Під час імпорту анімації кота зі Spine виявили неправильний масштаб і точку прив’язки, тому стрибок не збігається з ігровою колізією.</td><td>Tech</td><td>High</td><td>High</td><td>Senior Dev</td><td><ul><li>Перевірити налаштування експорту зі Spine</li><li>Виправити масштаб і точку прив’язки</li><li>Повторно імпортувати анімацію</li><li>Перевірити стрибок і приземлення</li></ul></td><td>28.10.2026</td><td>In Progress</td></tr>
+          <tr><td>Кілька важливих ассетів персонажа й пропсів не готові до поточної збірки, тому виробництво ассетів блокує ігровий рівень.</td><td>People</td><td>High</td><td>High</td><td>Lead Artist + PM</td><td><ul><li>Визначити мінімальний набір ассетів для ігрового рівня</li><li>Розподілити відсутні ассети</li><li>Для другорядних пропсів використати плейсхолдери</li><li>Щодня перевіряти прогрес</li></ul></td><td>29.10.2026</td><td>In Progress</td></tr>
+          <tr><td>Під час тесту на меншому форматі екрана таймер і лічильник упійманих комах у HUD накладаються один на одного.</td><td>Tech</td><td>Medium</td><td>Medium</td><td>UI/UX + Senior Dev</td><td><ul><li>Виправити колізії платформи й зони спрацювання комахи</li><li>Додати перевірки для крайніх випадків</li><li>Повторно пройти основний сценарій рівня</li></ul></td><td>30.10.2026</td><td>Open</td></tr>
+          <tr><td>Під час перевірки виявили, що кіт може проходити крізь порцелянову платформу, а зона спрацювання комахи іноді не працює.</td><td>Quality</td><td>High</td><td>High</td><td>Senior Dev</td><td>—</td><td>29.10.2026</td><td>In Progress</td></tr>
+          <tr><td>Відгук стейкхолдера надійшов із запізненням і змінив іконки бонусів та підписи таймера після підготовки макета UI.</td><td>Client</td><td>Medium</td><td>Medium</td><td>GD + Producer</td><td><ul><li>Відокремити обов’язкові зміни від побажань</li><li>Оновити затверджений макет UI</li><li>Погодити зміни для vertical slice</li><li>Решту перенести в наступний етап</li></ul></td><td>28.10.2026</td><td>Open</td></tr>
+        </tbody></table></div>
+        <div class="gov-table-footer"><p>Issue Log · Purrcelain Panic Vertical Slice</p><a href="https://docs.google.com/spreadsheets/d/1WquavUikh5NpupMbyY4uh4J-bMsilNdbfyRHNXgfUuw/edit?gid=578865373#gid=578865373&amp;range=A1:I1" target="_blank" rel="noopener">Відкрити Master Doc ↗</a></div>
+      </div>
+      <a class="next next--large" href="#hero" aria-label="До початку"><i></i></a>
+    </section>
+  </main>
+  <footer class="footer"><span>Purrcelain Panic · Project Management Presentation · <a href="https://docs.google.com/spreadsheets/d/1WquavUikh5NpupMbyY4uh4J-bMsilNdbfyRHNXgfUuw/edit?gid=0">Dev Plan source ↗</a></span><a href="https://www.styleshout.com/">Дизайн-система адаптована з Monica / StyleShout ↗</a></footer>
+  <script src="site.js"></script>
+  <script src="gantt.js?v=gantt-data-20261107-1"></script>
+</body>
+</html>
