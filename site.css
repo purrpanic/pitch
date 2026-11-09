@@ -61,6 +61,16 @@
 /* Keep the retired mobile gameplay slide out of the presentation flow. */
 #gameplay[hidden]{display:none !important;}
 
+/* Keep the first three Elevator Pitch controls visible after the retired
+   gameplay slide is removed from the presentation flow. */
+#hero > .next,
+#concept > .next,
+#game-loop > .next{
+  visibility:visible !important;
+  opacity:1 !important;
+  pointer-events:auto !important;
+}
+
 /* Typography baseline: one inherited Arial family, display headings at 40–72px,
    supporting copy at 17–24px, detail text at 15–19px, with compact labels below. */
 .pitch-screen--concept .pitch-copy,
