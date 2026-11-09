@@ -58,6 +58,9 @@
 @media(max-width:760px){.pitch-content{padding:100px 0 112px}.pitch-split,.pitch-split--phone,.pitch-screen--game-loop .pitch-split--phone{grid-template-columns:1fr;gap:24px}.pitch-screen--game-loop .pitch-phone{order:2}.pitch-illustration{height:360px;min-height:0}.pitch-audience,.pitch-monetization{background-size:cover;background-position:left center}.pitch-phone{width:min(240px,75%)}.pitch-screen--slice .budget-phone{width:220px}.pitch-center{text-align:left}.pitch-copy h2{margin-bottom:16px}.pitch-showcase .platforms{margin-top:24px}}
 @media(max-width:460px){.pitch-illustration{height:300px}.pitch-screen--gameplay .phone-steps{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.pitch-screen--gameplay .phone-step{display:flex;flex-direction:column;gap:8px;align-items:center}.pitch-screen--gameplay .phone-frame{width:100%;height:auto}.pitch-screen--gameplay .step-caption{display:block;text-align:center}.pitch-screen--gameplay .step-caption strong{font-size:20px}.pitch-screen--gameplay .step-caption h3{font-size:13px}.pitch-steps li{gap:12px}.pitch-content{padding-bottom:104px}}
 
+/* Keep the retired mobile gameplay slide out of the presentation flow. */
+#gameplay[hidden]{display:none !important;}
+
 /* Typography baseline: one inherited Arial family, display headings at 40–72px,
    supporting copy at 17–24px, detail text at 15–19px, with compact labels below. */
 .pitch-screen--concept .pitch-copy,
