@@ -185,38 +185,6 @@
 [data-screen] > .next:hover{transform:translateX(-50%) scale(1.08);}
 [data-screen] > .next:active{transform:translateX(-50%) scale(.9);}
 
-/* Compact contacts below the store badges on the opening slide. */
-.hero-contacts{
-  display:inline-flex;
-  align-items:center;
-  margin-top:14px;
-  border:1px solid rgba(235,187,124,.32);
-  border-radius:12px;
-  background:linear-gradient(145deg,rgba(92,43,51,.76),rgba(45,16,28,.88));
-  box-shadow:0 8px 22px rgba(9,3,9,.24);
-  backdrop-filter:blur(7px);
-  overflow:hidden;
-}
-.hero-contact{
-  display:flex;
-  align-items:center;
-  gap:9px;
-  min-height:42px;
-  padding:9px 15px;
-  color:#fff0d9;
-  font-size:13px;
-  font-weight:700;
-  transition:background .18s ease,color .18s ease;
-}
-.hero-contact + .hero-contact{border-left:1px solid rgba(235,187,124,.24);}
-.hero-contact:hover{background:rgba(244,211,155,.09);color:#fff7e9;}
-.hero-contact svg{width:20px;height:20px;flex:0 0 20px;fill:#f4d39b;}
-@media(max-width:460px){
-  .hero-contacts{display:inline-grid;align-items:stretch;}
-  .hero-contact{width:100%;font-size:12px;}
-  .hero-contact + .hero-contact{border-left:0;border-top:1px solid rgba(235,187,124,.24);}
-}
-
 /* Final contact screen. */
 .contact-screen__content{
   display:flex;
