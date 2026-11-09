@@ -8,7 +8,9 @@ if ('IntersectionObserver' in window && !reduceMotion.matches) {
   reveals.forEach(element => revealObserver.observe(element));
 } else reveals.forEach(element => element.classList.add('visible'));
 
-const screens = [...document.querySelectorAll('[data-screen]')];
+// Exclude intentionally retired slides so hidden sections cannot affect
+// active-state detection or the fixed next-screen control.
+const screens = [...document.querySelectorAll('[data-screen]:not([hidden])')];
 const screenLinks = [...document.querySelectorAll('.screen-nav a')];
 const blockLinks = [...document.querySelectorAll('.block-nav a[data-block]')];
 const updateScreen = () => {
