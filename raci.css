@@ -1,5 +1,5 @@
 .raci { position: relative; overflow: hidden; }
-.raci-cover { background-position: calc(50% + 10vw) center; --pp-section-shade: none; }
+.raci-cover { background-position: center; background-size: 100% 100%; --pp-section-shade: none; }
 .raci-cover__shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(31,9,20,.94) 0%, rgba(42,13,26,.82) 40%, rgba(42,13,26,.18) 72%, rgba(20,6,14,.08) 100%); }
 .raci-cover__content { position: relative; z-index: 2; max-width: 880px; margin-left: 5vw; }
 .raci-logo { display: block; width: min(560px,42vw); max-height: 28vh; margin: 0 0 clamp(20px,3vh,32px); object-fit: contain; object-position: left center; }
